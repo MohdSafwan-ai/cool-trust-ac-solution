@@ -1,0 +1,28 @@
+{
+  "routes": 14,
+  "viewportWidths": [
+    360,
+    375,
+    390,
+    414,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "checks": [
+    "HTTP 200 for all internal pages",
+    "unique titles and meta descriptions",
+    "one H1 per page",
+    "genuine JSON-LD contact details",
+    "both telephone links",
+    "WhatsApp messages, placeholder and security attributes",
+    "address-based map and official directions links",
+    "no horizontal overflow on representative pages",
+    "fixed mobile contact bar",
+    "mobile navigation opens and closes on navigation",
+    "custom missing-service page",
+    "no browser JavaScript errors"
+  ],
+  "status": "passed"
+}
