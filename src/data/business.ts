@@ -18,6 +18,11 @@ export const business = {
     addressCountry: 'IN',
   },
 };
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '');
+const configuredUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL
+    : undefined);
+export const siteUrl = configuredUrl?.replace(/\/$/, '');
 export const productionUrl =
   siteUrl && !/localhost|127\.0\.0\.1/.test(siteUrl) ? siteUrl : undefined;

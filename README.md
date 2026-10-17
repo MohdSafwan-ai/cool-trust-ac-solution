@@ -20,7 +20,7 @@ npm start
 
 ## Configuration
 
-Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the final HTTPS production domain. Rebuild after changing it. Canonical URLs and absolute sitemap entries are deliberately omitted until a non-local domain is configured. No private API keys are required.
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the final HTTPS production domain. Rebuild after changing it. On Vercel, the production domain is detected automatically through `VERCEL_PROJECT_PRODUCTION_URL`. An explicit `NEXT_PUBLIC_SITE_URL` takes precedence. Canonical URLs and sitemap entries are omitted only when neither production URL is available. No private API keys are required.
 
 Business contact information, address and confirmed service areas live in `src/data/business.ts`. Service descriptions and tasks live in `src/data/services.ts`. WhatsApp and map URLs are built in `src/lib/contact.ts`.
 
@@ -40,7 +40,7 @@ Business contact information, address and confirmed service areas live in `src/d
 3. Set `NEXT_PUBLIC_SITE_URL` to the final production URL (including `https://`, no trailing slash) for the production environment.
 4. Deploy. If the domain changes, update the variable and redeploy. Check `/sitemap.xml`, canonical links, telephone and WhatsApp actions after deployment.
 
-This project has not been deployed to a hosting account as part of local implementation.
+The GitHub repository is connected to the Vercel project `cool-trust-ac-solution`. Pushes to `main` deploy to production.
 
 ## Photography and business confirmation
 
