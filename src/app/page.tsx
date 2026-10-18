@@ -75,7 +75,7 @@ export default function Home() {
                 Explore gallery <ArrowUpRight size={16} />
               </Link>
             </div>
-            <p>Real service moments. Photos enhanced with AI for clarity.</p>
+            <p>Real service moments, from our gallery.</p>
           </div>
         </div>
       </section>
