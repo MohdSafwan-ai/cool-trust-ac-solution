@@ -8,6 +8,7 @@ export const navigation = [
   ['Home', '/'],
   ['Services', '/services'],
   ['About', '/about'],
+  ['Gallery', '/gallery'],
   ['Service Areas', '/service-areas'],
   ['Contact', '/contact'],
 ];

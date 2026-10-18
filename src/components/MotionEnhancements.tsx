@@ -13,7 +13,7 @@ export default function MotionEnhancements() {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const targets = Array.from(
       document.querySelectorAll<HTMLElement>(
-        '.section-heading, .service-row, .about-grid > div, .steps-grid > div, .areas-section > div, .contact-section > div, .map-heading, .related',
+        '.section-heading, .gallery-photo, .service-row, .about-grid > div, .steps-grid > div, .areas-section > div, .contact-section > div, .map-heading, .related',
       ),
     );
     let observer: IntersectionObserver | undefined;

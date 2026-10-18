@@ -1,6 +1,6 @@
 # Cool Trust AC Solution
 
-A mobile-first Next.js App Router website for the Greater Noida business. Includes Home, Services, eight service detail pages, About, Service Areas, Contact, Privacy Policy, and a custom 404 page.
+A mobile-first Next.js App Router website for the Greater Noida business. Includes Home, Services, eight service detail pages, About, Gallery, Service Areas, Contact, Privacy Policy, and a custom 404 page.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ npm start
 
 Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the final HTTPS production domain. Rebuild after changing it. On Vercel, the production domain is detected automatically through `VERCEL_PROJECT_PRODUCTION_URL`. An explicit `NEXT_PUBLIC_SITE_URL` takes precedence. Canonical URLs and sitemap entries are omitted only when neither production URL is available. No private API keys are required.
 
-Business contact information, address and confirmed service areas live in `src/data/business.ts`. Service descriptions and tasks live in `src/data/services.ts`. WhatsApp and map URLs are built in `src/lib/contact.ts`.
+Business contact information, address and confirmed service areas live in `src/data/business.ts`. Service descriptions and tasks live in `src/data/services.ts`. Gallery photos and captions live in `src/data/gallery.ts`; add new entries there to expand the gallery. WhatsApp and map URLs are built in `src/lib/contact.ts`.
 
 ## Completed features
 
@@ -43,6 +43,8 @@ Business contact information, address and confirmed service areas live in `src/d
 The GitHub repository is connected to the Vercel project `cool-trust-ac-solution`. Pushes to `main` deploy to production.
 
 ## Photography and business confirmation
+
+- The three photographs in `public/images/gallery/` were supplied by the business for the technician gallery. The original images are preserved; responsive thumbnails use Next Image and the full-size viewer contains the full photograph.
 
 - `public/images/ac-outdoor.jpg`: illustrative stock photo by José Andrés Pacheco Cortes: https://www.pexels.com/photo/man-checking-an-air-conditioner-5463575/
 - `public/images/ac-service.jpg`: illustrative stock photo by the same photographer: https://www.pexels.com/photo/man-repairing-an-aircon-5463580/

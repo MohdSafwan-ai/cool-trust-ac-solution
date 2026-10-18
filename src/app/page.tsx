@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Gallery from '@/components/Gallery';
 import { MapPin, Check } from 'lucide-react';
 import {
   ContactButtons,
@@ -70,6 +71,7 @@ export default function Home() {
       </div>
       <ServicesList preview />
       <AboutBlock />
+      <Gallery preview />
       <Steps />
       <AreasBlock />
       <ContactBlock />

@@ -255,6 +255,7 @@ export function Footer() {
               ['Home', '/'],
               ['Services', '/services'],
               ['About', '/about'],
+              ['Gallery', '/gallery'],
               ['Contact', '/contact'],
               ['Privacy Policy', '/privacy-policy'],
             ].map(([label, url]) => (
