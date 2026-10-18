@@ -81,7 +81,9 @@ img {
   padding-block: 80px;
 }
 .eyebrow {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.17em;
@@ -89,6 +91,7 @@ img {
   margin-bottom: 16px;
 }
 .button {
+  letter-spacing: 0.01em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -214,8 +217,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  padding-top: 58px;
-  padding-bottom: 58px;
+  padding-top: 68px;
+  padding-bottom: 68px;
   align-items: center;
 }
 .hero-copy {
@@ -238,8 +241,8 @@ img {
   color: #5a7688;
 }
 .hero-copy > p {
-  max-width: 400px;
-  font-size: 14px;
+  max-width: 420px;
+  font-size: 15px;
   line-height: 1.85;
   margin-top: 23px;
 }
@@ -256,15 +259,16 @@ img {
   margin-top: 27px;
 }
 .hero-note > span:first-child {
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
-  background: #738d7c;
+  width: 24px;
+  height: 1px;
+  background: #93a7b4;
 }
 .hero-visual {
   position: relative;
-  height: 520px;
-  border-radius: 8px;
+  height: 540px;
+  border: 5px solid white;
+  box-shadow: 0 12px 32px -24px rgba(16, 40, 61, 0.3);
+  border-radius: 10px;
   overflow: hidden;
   background: #e2e7e7;
 }
@@ -277,9 +281,9 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(16, 40, 61, 0.88);
+  background: var(--navy);
   color: white;
-  padding: 20px 25px;
+  padding: 22px 25px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -337,8 +341,9 @@ img {
 .service-icon {
   width: 49px;
   height: 49px;
-  background: #edf1f2;
-  border-radius: 7px;
+  background: white;
+  border: 1px solid #dfe6eb;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,8 +365,8 @@ img {
   color: #718390;
 }
 .about-section {
-  background: #edf1f2;
-  padding-block: 70px;
+  background: var(--navy);
+  padding-block: 84px;
 }
 .about-grid {
   display: grid;
@@ -433,7 +438,12 @@ img {
 .contact-section {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
+  gap: 60px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 48px;
+  margin-block: 76px;
 }
 .contact-section h2 {
   max-width: 380px;
@@ -947,13 +957,18 @@ footer {
   }
   .contact-section {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 30px;
+    padding: 26px 22px;
+    margin-block: 48px;
   }
   .contact-section h2 {
     max-width: 300px;
   }
   .contact-section .contact-buttons {
-    gap: 8px;
+    gap: 10px;
+  }
+  .contact-section .contact-buttons .button {
+    flex: 1 1 100%;
   }
   .contact-section .button {
     font-size: 12px;
@@ -1211,7 +1226,9 @@ footer {
   }
   .service-row:hover .service-icon {
     transform: translateY(-2px);
-    background-color: #e2e9ed;
+    background-color: var(--navy);
+    border-color: var(--navy);
+    color: white;
   }
   .text-link:hover > svg {
     transform: translateX(3px);
@@ -1343,5 +1360,77 @@ footer {
   [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* Refined hierarchy and a stronger editorial anchor. */
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+.about-section h2,
+.about-section h3,
+.about-section .text-link {
+  color: #ffffff;
+}
+.about-section .eyebrow {
+  color: #acbfcd;
+}
+.about-section p {
+  color: #c2ced7;
+}
+.about-grid > div:last-child {
+  border-left: 1px solid #385064;
+  padding-left: 44px;
+}
+.about-section .text-link {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #597183;
+}
+.hero-copy > .hero-service-line {
+  border-left: 2px solid #b8c8d2;
+  padding-left: 16px;
+}
+.contact-details > a:not(.text-link) {
+  font-size: 14px;
+}
+.area-label {
+  background: white;
+  border: 1px solid var(--line);
+}
+.service-icon {
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .contact-section {
+    padding: 32px;
+    gap: 28px;
+  }
+  .about-grid > div:last-child {
+    padding-left: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .hero-visual {
+    border-width: 4px;
+  }
+  .about-grid > div:last-child {
+    border-left: 0;
+    border-top: 1px solid #385064;
+    padding: 26px 0 0;
+  }
+  .hero-copy > .hero-service-line {
+    padding-left: 13px;
   }
 }
