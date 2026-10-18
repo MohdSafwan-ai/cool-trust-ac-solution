@@ -49,7 +49,7 @@ The GitHub repository is connected to the Vercel project `cool-trust-ac-solution
 - `public/images/ac-outdoor.jpg`: illustrative stock photo by José Andrés Pacheco Cortes: https://www.pexels.com/photo/man-checking-an-air-conditioner-5463575/
 - `public/images/ac-service.jpg`: illustrative stock photo by the same photographer: https://www.pexels.com/photo/man-repairing-an-aircon-5463580/
 - Photos downloaded from Pexels for local hosting; license: https://www.pexels.com/license/. These do not depict the business's own team.
-- Replace the hero stock photo with an approved photograph of a technician servicing a wall-mounted AC in a residential setting to satisfy the exact requested photo treatment. Current hero shows a real outdoor AC inspection.
+- The homepage hero now presents three AI-enhanced photographs from the business gallery: a main technician portrait alongside two AC servicing details. The former outdoor stock hero image remains as an unused asset.
 - Air purifier and refrigerator detail pages intentionally show labeled photograph placeholders awaiting relevant business photographs.
 - Confirm the final domain, official map listing/pin, business photography, and the privacy text against actual data-handling practices before launch. No hours, ratings, prices, service guarantees, additional service areas, or geographic coordinates have been invented.
 - All links remain accessible if the map cannot load. The map uses an address query; it does not claim a verified exact pin.

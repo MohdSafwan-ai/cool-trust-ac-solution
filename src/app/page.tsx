@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { galleryPhotos } from '@/data/gallery';
 import Gallery from '@/components/Gallery';
-import { MapPin, Check } from 'lucide-react';
+import { MapPin, Check, ArrowUpRight } from 'lucide-react';
 import {
   ContactButtons,
   ServicesList,
@@ -39,17 +41,41 @@ export default function Home() {
             <span>For your home. For your business.</span>
           </div>
         </div>
-        <div className="hero-visual">
-          <Image
-            src="/images/ac-outdoor.jpg"
-            alt="Technician checking refrigerant pressure on an outdoor air conditioner"
-            fill
-            priority
-            sizes="(max-width: 760px) 100vw, 50vw"
-          />
-          <div className="photo-caption">
-            <span>CARE THAT KEEPS YOU COMFORTABLE</span>
-            <span>AC & appliance services</span>
+        <div className="hero-visual hero-story">
+          <div className="hero-story-grid">
+            <div className="hero-story-main">
+              <Image
+                src={galleryPhotos[2].src}
+                alt={galleryPhotos[2].alt}
+                fill
+                priority
+                sizes="(max-width: 760px) 60vw, (max-width: 1240px) 30vw, 340px"
+              />
+            </div>
+            <div className="hero-story-details">
+              {galleryPhotos.slice(0, 2).map((photo) => (
+                <div className="hero-story-detail" key={photo.src}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 760px) 35vw, (max-width: 1240px) 20vw, 210px"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="hero-story-footer">
+            <span className="hero-story-eyebrow">
+              THE PEOPLE BEHIND THE SERVICE
+            </span>
+            <div className="hero-story-caption">
+              <strong>Our technician at work.</strong>
+              <Link href="/gallery">
+                Explore gallery <ArrowUpRight size={16} />
+              </Link>
+            </div>
+            <p>Real service moments. Photos enhanced with AI for clarity.</p>
           </div>
         </div>
       </section>

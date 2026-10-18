@@ -1673,3 +1673,112 @@ footer {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* A photographic triptych built from the business's own gallery. */
+.hero-story {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: var(--navy);
+}
+.hero-story-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+.hero-story-main,
+.hero-story-detail {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #203b50;
+}
+.hero-story-main img {
+  object-position: center 12%;
+}
+.hero-story-details {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  min-height: 0;
+}
+.hero-story-detail img {
+  object-position: center 10%;
+}
+.hero-story-footer {
+  padding: 17px 5px 7px;
+}
+.hero-story-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: #acbfcd;
+}
+.hero-story-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hero-story-caption strong {
+  font-family: var(--font-heading), Arial, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+  color: white;
+}
+.hero-story-caption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-height: 32px;
+  font-size: 11px;
+  color: #d3dfe7;
+}
+.hero-story-caption a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero-story-caption a:focus-visible {
+  outline-color: white;
+}
+.hero-story-footer p {
+  margin: 5px 0 0;
+  font-size: 10px;
+  color: #acbfcd;
+}
+@media (max-width: 760px) {
+  .hero-story {
+    height: 400px;
+    padding: 8px;
+  }
+  .hero-story-grid {
+    gap: 6px;
+  }
+  .hero-story-details {
+    gap: 6px;
+  }
+  .hero-story-footer {
+    padding: 15px 3px 5px;
+  }
+  .hero-story-caption strong {
+    font-size: 16px;
+  }
+  .hero-story-caption a {
+    min-height: 44px;
+  }
+  .hero-story-eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.13em;
+    margin-bottom: 3px;
+  }
+  .hero-story-footer p {
+    font-size: 9px;
+    margin-top: 1px;
+  }
+}
