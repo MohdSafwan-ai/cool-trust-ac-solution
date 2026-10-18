@@ -9,8 +9,9 @@ import {
   Steps,
 } from '@/components/Content';
 import { pageMetadata } from '@/lib/metadata';
+import { business } from '@/data/business';
 export const metadata = pageMetadata(
-  'AC Repair, Servicing & Installation in Greater Noida',
+  business.name + ' | AC Repairing in Greater Noida',
   'AC repair, cleaning, installation, gas refilling and maintenance in Greater Noida. Contact Cool Trust AC Solution for home and business service enquiries.',
   '/',
 );
@@ -23,12 +24,10 @@ export default function Home() {
             <MapPin size={14} />
             Greater Noida, Uttar Pradesh
           </span>
-          <h1>
-            AC Repair,
-            <br />
-            Servicing &<br />
-            <span>Installation.</span>
-          </h1>
+          <h1>{business.name}</h1>
+          <p className="hero-service-line">
+            AC Repairing, Repair Service &amp; Installation
+          </p>
           <p>
             AC repair, cleaning, installation, gas refilling and maintenance
             services for residential and commercial air conditioners.

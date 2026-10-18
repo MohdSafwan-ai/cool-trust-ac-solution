@@ -1220,3 +1220,21 @@ footer {
     transform: scale(1.015);
   }
 }
+
+.hero h1 {
+  text-wrap: balance;
+}
+.hero-copy > .hero-service-line {
+  margin: 20px 0 0;
+  color: var(--navy);
+  font-family: var(--font-heading), Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  .hero-copy > .hero-service-line {
+    margin-top: 18px;
+    font-size: 17px;
+  }
+}
