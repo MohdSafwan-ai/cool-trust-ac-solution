@@ -44,7 +44,7 @@ The GitHub repository is connected to the Vercel project `cool-trust-ac-solution
 
 ## Photography and business confirmation
 
-- The three photographs in `public/images/gallery/` were supplied by the business for the technician gallery. The original images are preserved; responsive thumbnails use Next Image and the full-size viewer contains the full photograph.
+- The three photographs in `public/images/gallery/` were supplied by the business for the technician gallery. The original images are preserved. Gallery images now use separate AI-enhanced versions; the viewer offers a View original link. Enhancement prompts and saved paths are recorded in `docs/gallery-photo-enhancement.md`.
 
 - `public/images/ac-outdoor.jpg`: illustrative stock photo by José Andrés Pacheco Cortes: https://www.pexels.com/photo/man-checking-an-air-conditioner-5463575/
 - `public/images/ac-service.jpg`: illustrative stock photo by the same photographer: https://www.pexels.com/photo/man-repairing-an-aircon-5463580/

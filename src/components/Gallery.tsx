@@ -96,7 +96,7 @@ export default function Gallery({ preview = false }: { preview?: boolean }) {
         ))}
       </div>
       <p className="gallery-hint">
-        Select a photo to view it in full.{' '}
+        AI-enhanced for clarity. Select a photo to view it in full.{' '}
         <span>Swipe to explore the gallery.</span>
       </p>
       <dialog
@@ -120,6 +120,15 @@ export default function Gallery({ preview = false }: { preview?: boolean }) {
       >
         <div className="gallery-viewer-toolbar">
           <span>OUR GALLERY</span>
+          <a
+            className="gallery-original-link"
+            href={photo.originalSrc}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View original
+            <ArrowUpRight size={14} />
+          </a>
           <button
             type="button"
             className="viewer-control"

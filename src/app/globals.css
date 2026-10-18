@@ -1660,3 +1660,16 @@ footer {
     font-size: 14px;
   }
 }
+.gallery-original-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  min-height: 44px;
+  font-size: 12px;
+  color: #d3dfe7;
+}
+.gallery-original-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
