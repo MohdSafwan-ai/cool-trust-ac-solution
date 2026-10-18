@@ -1238,3 +1238,110 @@ footer {
     font-size: 17px;
   }
 }
+
+/* Section choreography uses only opacity and transforms, without layout shifts. */
+@keyframes hero-frame-in {
+  from {
+    opacity: 0;
+    clip-path: inset(3% 3% 3% 3% round 8px);
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 8px);
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    transition:
+      opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  [data-reveal='pending'] {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  [data-reveal='visible'] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  [data-reveal]:focus-within {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms;
+  }
+  .hero-copy > *,
+  .page-heading > * {
+    animation-duration: 650ms;
+  }
+  .hero-visual {
+    animation: hero-frame-in 850ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+  }
+  .photo-caption {
+    animation: settle-in 650ms cubic-bezier(0.22, 1, 0.36, 1) 300ms both;
+  }
+  .desktop-nav a {
+    position: relative;
+    box-shadow: none;
+  }
+  .desktop-nav a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .desktop-nav a[aria-current='page'] {
+    box-shadow: none;
+  }
+  .desktop-nav a[aria-current='page']::after,
+  .desktop-nav a:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .service-row {
+    position: relative;
+  }
+  .service-row::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #7290a3;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .service-row:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .button > svg {
+    transition: transform 240ms ease;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .desktop-nav a:hover::after,
+  .service-row:hover::after {
+    transform: scaleX(1);
+  }
+  .contact-buttons .button:hover > svg:last-child:not(:first-child) {
+    transform: translate(2px, -2px);
+  }
+  .button:hover {
+    transform: translateY(-2px);
+  }
+}
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

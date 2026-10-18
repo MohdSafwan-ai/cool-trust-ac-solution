@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Manrope, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
+import MotionEnhancements from '@/components/MotionEnhancements';
 import { Footer, LocationMap } from '@/components/Content';
 import { business, productionUrl, siteUrl } from '@/data/business';
 const heading = Manrope({
@@ -53,6 +54,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <LocationMap />
         <Footer />
+        <MotionEnhancements />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
