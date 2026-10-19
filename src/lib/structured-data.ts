@@ -1,5 +1,6 @@
 import { business, productionUrl } from '@/data/business';
 import { services } from '@/data/services';
+import { faqs } from '@/data/faqs';
 import { directionsUrl } from '@/lib/contact';
 
 export function businessStructuredData() {
@@ -13,6 +14,7 @@ export function businessStructuredData() {
         '@type': 'HVACBusiness',
         ...identity,
         name: business.name,
+        description: `${business.name} provides air conditioning and appliance-related service enquiries from Gaur City 1, Haibatpur, Greater Noida.`,
         telephone: business.telephone,
         address: { '@type': 'PostalAddress', ...business.postalAddress },
         areaServed: {
@@ -97,5 +99,18 @@ export function serviceStructuredData(service: (typeof services)[number]) {
         })),
       },
     ],
+  };
+}
+
+export function faqStructuredData() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    ...(productionUrl ? { '@id': productionUrl + '/#common-questions' } : {}),
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
   };
 }

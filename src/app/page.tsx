@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { galleryPhotos } from '@/data/gallery';
 import Gallery from '@/components/Gallery';
+import FrequentlyAskedQuestions from '@/components/FrequentlyAskedQuestions';
 import { MapPin, Check, ArrowUpRight } from 'lucide-react';
 import {
   ContactButtons,
@@ -103,6 +104,7 @@ export default function Home() {
       <Gallery preview />
       <Steps />
       <AreasBlock />
+      <FrequentlyAskedQuestions />
       <ContactBlock />
     </>
   );

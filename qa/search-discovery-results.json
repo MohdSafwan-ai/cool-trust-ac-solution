@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "publicPages": 15,
+  "faqAnswers": 6,
+  "checks": [
+    "explicit search crawler permission",
+    "all public pages return HTTP 200 with search crawler user agent",
+    "production responses do not send noindex headers",
+    "visible FAQ and structured answers match",
+    "native FAQ works without JavaScript",
+    "no overflow at eight viewport widths",
+    "visible text stays focused on business services"
+  ],
+  "limitation": "Test requests use the documented user-agent string. They do not prove an actual search crawler visit or guarantee inclusion."
+}

@@ -58,6 +58,8 @@ The GitHub repository is connected to the Vercel project `cool-trust-ac-solution
 
 See `docs/seo-launch.md` for the current checks, domain connection order, and Google Search Console setup. Set `NEXT_PUBLIC_SITE_URL` to the chosen final HTTPS origin after domain verification. Optional HTML verification uses `GOOGLE_SITE_VERIFICATION`.
 
+The homepage now includes factual common questions with matching structured answers and an explicit search-crawler access rule. See `docs/search-discovery.md` for the implementation and verified limits.
+
 ## Verification
 
 ```sh

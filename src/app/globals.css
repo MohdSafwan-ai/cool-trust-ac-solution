@@ -1820,3 +1820,62 @@ footer {
 .enquiry-details li {
   padding: 5px 0;
 }
+
+.faq-section {
+  padding-bottom: 20px;
+}
+.faq-list {
+  border-top: 1px solid #dce3e8;
+}
+.faq-item {
+  border-bottom: 1px solid #dce3e8;
+  scroll-margin-top: 110px;
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 23px 0;
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-heading), Arial, sans-serif;
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary:hover {
+  color: #38617b;
+}
+.faq-item summary:focus-visible {
+  outline: 3px solid #397c9e;
+  outline-offset: 4px;
+}
+.faq-item[open] summary svg {
+  transform: rotate(45deg);
+}
+.faq-item p {
+  max-width: 850px;
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item summary svg {
+    transition: transform 180ms ease;
+  }
+}
+@media (max-width: 760px) {
+  .faq-section {
+    padding-bottom: 0;
+  }
+  .faq-item summary {
+    padding-block: 20px;
+    gap: 18px;
+    font-size: 15px;
+  }
+}
