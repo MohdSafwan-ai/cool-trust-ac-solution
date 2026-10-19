@@ -1,5 +1,6 @@
 {
   "baseline": {
+    "commit": "dc16d01",
     "url": "https://cool-trust-ac-solution.vercel.app/",
     "fetchedAt": "2026-10-19T07:17:39.530Z",
     "scores": {
@@ -14,5 +15,37 @@
       "first-contentful-paint": "1.6 s"
     }
   },
-  "note": "Individual automated mobile lab measurements; scores can vary."
+  "firstProductionRun": {
+    "commit": "966474f",
+    "url": "https://cool-trust-ac-solution.vercel.app/",
+    "fetchedAt": "2026-10-19T07:31:16.813Z",
+    "scores": {
+      "performance": 72,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": "4.2 s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "100 ms",
+      "first-contentful-paint": "2.8 s"
+    }
+  },
+  "productionRecheck": {
+    "commit": "966474f",
+    "url": "https://cool-trust-ac-solution.vercel.app/",
+    "fetchedAt": "2026-10-19T07:35:54.582Z",
+    "scores": {
+      "performance": 89,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": "2.6 s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "130 ms",
+      "first-contentful-paint": "1.9 s"
+    }
+  },
+  "note": "Individual automated mobile lab measurements; the first production run had a much slower initial server response. All runs are retained for comparison. A final high-priority hint was also added to the main hero image after these measurements."
 }

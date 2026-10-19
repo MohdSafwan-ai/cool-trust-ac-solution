@@ -49,6 +49,7 @@ export default function Home() {
                 alt={galleryPhotos[2].alt}
                 fill
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 760px) 60vw, (max-width: 1240px) 30vw, 340px"
               />
             </div>

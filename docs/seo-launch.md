@@ -33,6 +33,10 @@ The exact Hostinger domain, preferred primary hostname, access to its DNS panel,
 - Results: `qa/seo-results.json`, `qa/results.json` and `qa/seo-lighthouse-summary.json`.
 - Lighthouse scores represent individual automated mobile lab runs and can vary between runs.
 
+## Mobile audit results
+
+Production checks scored 100 for SEO and 100 for accessibility. Performance varied from 72 to 89 between two runs with different initial response times. The repeat measured a 2.6s largest contentful paint, zero layout shift, and 130ms total blocking time. Baseline performance was 88, with 96 accessibility and 100 SEO. See the summary JSON for all measurements and audited commit IDs. A final priority hint was added to the main hero image after the measurements.
+
 ## Official references
 
 - Google local business structured data: https://developers.google.com/search/docs/appearance/structured-data/local-business
