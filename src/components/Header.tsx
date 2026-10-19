@@ -30,12 +30,16 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand" aria-label={business.name + ' home'}>
+        <Link
+          href="/"
+          className="brand"
+          aria-label={business.name.toUpperCase() + ' home'}
+        >
           <span className="brand-icon">
             <Snowflake size={31} />
           </span>
           <span>
-            COOL TRUST<small>AC SOLUTION</small>
+            COOL TRUST <small>AC SOLUTION</small>
           </span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">

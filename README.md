@@ -54,6 +54,10 @@ The GitHub repository is connected to the Vercel project `cool-trust-ac-solution
 - Confirm the final domain, official map listing/pin, business photography, and the privacy text against actual data-handling practices before launch. No hours, ratings, prices, service guarantees, additional service areas, or geographic coordinates have been invented.
 - All links remain accessible if the map cannot load. The map uses an address query; it does not claim a verified exact pin.
 
+## SEO and custom-domain launch
+
+See `docs/seo-launch.md` for the current checks, domain connection order, and Google Search Console setup. Set `NEXT_PUBLIC_SITE_URL` to the chosen final HTTPS origin after domain verification. Optional HTML verification uses `GOOGLE_SITE_VERIFICATION`.
+
 ## Verification
 
 ```sh

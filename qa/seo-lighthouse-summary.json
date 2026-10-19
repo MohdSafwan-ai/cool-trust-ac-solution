@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "url": "https://cool-trust-ac-solution.vercel.app/",
+    "fetchedAt": "2026-10-19T07:17:39.530Z",
+    "scores": {
+      "performance": 88,
+      "accessibility": 96,
+      "seo": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": "3.0 s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "230 ms",
+      "first-contentful-paint": "1.6 s"
+    }
+  },
+  "note": "Individual automated mobile lab measurements; scores can vary."
+}

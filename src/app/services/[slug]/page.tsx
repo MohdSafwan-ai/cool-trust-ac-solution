@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { services } from '@/data/services';
+import { serviceGuidance } from '@/data/service-guidance';
+import StructuredData from '@/components/StructuredData';
+import { serviceStructuredData } from '@/lib/structured-data';
 import { ContactButtons } from '@/components/Content';
 import { pageMetadata } from '@/lib/metadata';
 export function generateStaticParams() {
@@ -32,17 +35,27 @@ export default async function Page({
   const s = services.find((s) => s.slug === slug);
   if (!s) notFound();
   const ac = s.slug.startsWith('ac-');
+  const guidance = serviceGuidance[s.slug];
   return (
     <article className="container service-detail">
-      <Link href="/services" className="text-link">
-        <ArrowLeft size={16} />
-        All services
-      </Link>
+      <StructuredData data={serviceStructuredData(s)} />
+      <nav aria-label="Breadcrumb" className="breadcrumbs">
+        <ol>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/services">Services</Link>
+          </li>
+          <li aria-current="page">{s.title}</li>
+        </ol>
+      </nav>
       <div className="detail-grid">
         <div>
-          <span className="eyebrow">GREATER NOIDA · SERVICE ENQUIRIES</span>
-          <h1>{s.title}</h1>
+          <span className="eyebrow">SERVICE ENQUIRIES</span>
+          <h1>{s.title} in Greater Noida</h1>
           <p className="lead">{s.description}</p>
+          <p>{guidance.overview}</p>
           <h2>What we can help with</h2>
           <ul className="task-list">
             {s.tasks.map((t) => (
@@ -50,6 +63,12 @@ export default async function Page({
                 <Check size={17} />
                 {t}
               </li>
+            ))}
+          </ul>
+          <h2>Useful details to share</h2>
+          <ul className="enquiry-details">
+            {guidance.enquiryDetails.map((detail) => (
+              <li key={detail}>{detail}</li>
             ))}
           </ul>
           <h2>How to request this service</h2>

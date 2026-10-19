@@ -23,6 +23,8 @@ const configuredUrl =
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL
     : undefined);
-export const siteUrl = configuredUrl?.replace(/\/$/, '');
+export const siteUrl = configuredUrl
+  ? new URL(configuredUrl).origin
+  : undefined;
 export const productionUrl =
   siteUrl && !/localhost|127\.0\.0\.1/.test(siteUrl) ? siteUrl : undefined;

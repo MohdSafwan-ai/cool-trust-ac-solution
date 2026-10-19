@@ -14,7 +14,7 @@ import {
 import { pageMetadata } from '@/lib/metadata';
 import { business } from '@/data/business';
 export const metadata = pageMetadata(
-  business.name + ' | AC Repairing in Greater Noida',
+  'AC Repair & Installation in Greater Noida | ' + business.name,
   'AC repair, cleaning, installation, gas refilling and maintenance in Greater Noida. Contact Cool Trust AC Solution for home and business service enquiries.',
   '/',
 );
@@ -59,6 +59,8 @@ export default function Home() {
                     src={photo.src}
                     alt={photo.alt}
                     fill
+                    loading="eager"
+                    fetchPriority="high"
                     sizes="(max-width: 760px) 35vw, (max-width: 1240px) 20vw, 210px"
                   />
                 </div>

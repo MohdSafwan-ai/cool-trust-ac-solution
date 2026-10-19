@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Manrope, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
+import StructuredData from '@/components/StructuredData';
+import { businessStructuredData } from '@/lib/structured-data';
 import MotionEnhancements from '@/components/MotionEnhancements';
 import { Footer, LocationMap } from '@/components/Content';
 import { business, productionUrl, siteUrl } from '@/data/business';
@@ -23,27 +25,17 @@ export const metadata: Metadata = {
   },
   description:
     'AC repair, installation and appliance service enquiries in Greater Noida. Contact Cool Trust AC Solution by phone or WhatsApp.',
-  robots: { index: true, follow: true },
+  applicationName: business.name,
+  robots: { index: process.env.VERCEL_ENV !== 'preview', follow: true },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'HVACBusiness',
-    name: business.name,
-    telephone: business.telephone,
-    additionalProperty: {
-      '@type': 'PropertyValue',
-      name: 'Alternative telephone',
-      value: business.secondaryTelephone,
-    },
-    address: { '@type': 'PostalAddress', ...business.postalAddress },
-    areaServed: 'Greater Noida',
-    ...(productionUrl ? { url: productionUrl } : {}),
-  };
   return (
     <html lang="en-IN">
       <body className={heading.variable + ' ' + body.variable}>
@@ -55,12 +47,7 @@ export default function RootLayout({
         <LocationMap />
         <Footer />
         <MotionEnhancements />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema).replace(/</g, '\u003c'),
-          }}
-        />
+        <StructuredData data={businessStructuredData()} />
       </body>
     </html>
   );
