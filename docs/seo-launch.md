@@ -21,9 +21,17 @@
 6. Verify the final domain in the business owner's Google Search Console account, using its supplied DNS TXT token or URL-prefix HTML verification token. Submit `/sitemap.xml` and inspect the homepage and main service URLs.
 7. If the business has an official Google Business Profile, use the exact supplied listing and update its website address. Do not invent a listing URL or publish unverified business details.
 
+## Connected domain
+
+- Primary production origin: `https://www.cooltrustacsolution.com`.
+- `cooltrustacsolution.com` permanently redirects to the primary hostname with HTTP 308.
+- Both hostnames are verified in Vercel. Hostinger continues to manage DNS.
+- Hostinger DNS: `www` CNAME to `dc028e55a61bff91.vercel-dns-017.com`; apex A records `216.198.79.1` and `64.29.17.1`.
+- HTTPS certificate issued for both hostnames. Production `NEXT_PUBLIC_SITE_URL` explicitly selects the primary origin.
+
 ## Still needed
 
-The exact Hostinger domain, preferred primary hostname, access to its DNS panel, and Google Search Console verification details. No custom domain, DNS record or search-console ownership has been claimed or changed without those details.
+Google Search Console ownership verification and sitemap submission require the business owner's account and verification token. No Search Console verification or indexing has been claimed.
 
 ## Validation
 
