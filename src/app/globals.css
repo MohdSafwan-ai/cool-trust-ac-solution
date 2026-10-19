@@ -230,9 +230,10 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 11px;
+  font-size: 15px;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--muted);
+  color: var(--navy);
   margin-bottom: 24px;
 }
 .hero h1 {
@@ -799,7 +800,7 @@ footer {
   }
   .location-pill {
     margin-bottom: 19px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero h1 {
     font-size: 38px;

@@ -25,7 +25,7 @@ export default function Home() {
       <section className="container hero">
         <div className="hero-copy">
           <span className="location-pill">
-            <MapPin size={14} />
+            <MapPin size={17} aria-hidden="true" />
             Greater Noida, Uttar Pradesh
           </span>
           <h1>{business.name}</h1>
