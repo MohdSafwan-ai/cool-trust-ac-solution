@@ -32,6 +32,7 @@ export function businessStructuredData() {
         ...(productionUrl
           ? {
               image: [`${productionUrl}/images/gallery/our-technician.png`],
+              logo: `${productionUrl}/brand/logo-512.png`,
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
                 name: 'AC and appliance services',

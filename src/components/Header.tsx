@@ -1,8 +1,9 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, Snowflake } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { business } from '@/data/business';
 export const navigation = [
   ['Home', '/'],
@@ -36,7 +37,13 @@ export default function Header() {
           aria-label={business.name.toUpperCase() + ' home'}
         >
           <span className="brand-icon">
-            <Snowflake size={31} />
+            <Image
+              src="/brand/mark.svg"
+              alt=""
+              width={44}
+              height={44}
+              priority
+            />
           </span>
           <span>
             COOL TRUST <small>AC SOLUTION</small>

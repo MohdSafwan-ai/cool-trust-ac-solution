@@ -183,8 +183,10 @@ img {
 .brand-icon {
   display: flex;
   align-items: center;
-  border-right: 1px solid #cdd5da;
-  padding-right: 11px;
+  flex-shrink: 0;
+}
+.brand-icon img {
+  display: block;
 }
 .desktop-nav {
   display: flex;
@@ -742,8 +744,9 @@ footer {
   .brand small {
     font-size: 7px;
   }
-  .brand-icon svg {
-    width: 27px;
+  .brand-icon img {
+    width: 38px;
+    height: 38px;
   }
   .desktop-nav {
     display: none;
