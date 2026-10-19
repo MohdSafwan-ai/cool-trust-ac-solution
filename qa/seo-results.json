@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "pages": 15,
-  "canonicalOrigin": "https://cool-trust-ac-solution.vercel.app",
+  "canonicalOrigin": "https://www.cooltrustacsolution.com",
   "checks": [
     "unique titles and descriptions",
     "one visible H1",
@@ -17,77 +17,77 @@
     {
       "path": "/",
       "title": "AC Repair & Installation in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app"
+      "canonical": "https://www.cooltrustacsolution.com"
     },
     {
       "path": "/services",
       "title": "AC & Appliance Services in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services"
+      "canonical": "https://www.cooltrustacsolution.com/services"
     },
     {
       "path": "/about",
       "title": "About Us | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/about"
+      "canonical": "https://www.cooltrustacsolution.com/about"
     },
     {
       "path": "/gallery",
       "title": "Our Gallery | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/gallery"
+      "canonical": "https://www.cooltrustacsolution.com/gallery"
     },
     {
       "path": "/contact",
       "title": "Contact Us | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/contact"
+      "canonical": "https://www.cooltrustacsolution.com/contact"
     },
     {
       "path": "/service-areas",
       "title": "Service Areas | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/service-areas"
+      "canonical": "https://www.cooltrustacsolution.com/service-areas"
     },
     {
       "path": "/privacy-policy",
       "title": "Privacy Policy | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/privacy-policy"
+      "canonical": "https://www.cooltrustacsolution.com/privacy-policy"
     },
     {
       "path": "/services/ac-installation",
       "title": "AC Installation in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-installation"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-installation"
     },
     {
       "path": "/services/ac-repair",
       "title": "AC Repair in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-repair"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-repair"
     },
     {
       "path": "/services/ac-gas-filling",
       "title": "AC Gas Filling in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-gas-filling"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-gas-filling"
     },
     {
       "path": "/services/ac-amc",
       "title": "AC AMC Service in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-amc"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-amc"
     },
     {
       "path": "/services/ac-maintenance",
       "title": "AC Maintenance in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-maintenance"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-maintenance"
     },
     {
       "path": "/services/ac-rental",
       "title": "AC Rental Service in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/ac-rental"
+      "canonical": "https://www.cooltrustacsolution.com/services/ac-rental"
     },
     {
       "path": "/services/air-purifier-service",
       "title": "Air Purifier Service in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/air-purifier-service"
+      "canonical": "https://www.cooltrustacsolution.com/services/air-purifier-service"
     },
     {
       "path": "/services/refrigerator-repair",
       "title": "Refrigerator Repair in Greater Noida | Cool Trust AC Solution",
-      "canonical": "https://cool-trust-ac-solution.vercel.app/services/refrigerator-repair"
+      "canonical": "https://www.cooltrustacsolution.com/services/refrigerator-repair"
     }
   ]
 }
